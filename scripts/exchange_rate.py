@@ -60,5 +60,5 @@ class exchange_rate:
             tools.send_message(self.log_head + message_context)
 
 
-if __name__ == '__main__':
-    exchange_rate().run()
+# if __name__ == '__main__':
+    # exchange_rate().run()

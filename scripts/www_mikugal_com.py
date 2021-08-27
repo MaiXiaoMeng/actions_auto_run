@@ -1,11 +1,3 @@
-'''
-Author: MaiXiaoMeng
-Date: 2021-01-16 11:14:04
-LastEditors: MaiXiaoMeng
-LastEditTime: 2021-01-16 11:41:25
-FilePath: \actions_auto_run\scripts\www_mikugal_com.py
-'''
-
 import time
 import requests
 
@@ -42,10 +34,11 @@ class www_mikugal_com:
             'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8'}
         data = {
             'email': self.email,
-            'password': self.password}
+            'password': self.password
+        }
         response = self.session.post(url=url, headers=headers, data=data)
         response_json = response.json()['obj']
-        message_context = f'用户名:{response_json["nickname"]} 当前金币:{response_json["jf"]} + {response_json["qs"]}'
+        message_context = f'用户名:{response_json["nickname"]} 当前金币:{response_json["jf"]}'
         tools.send_message(self.log_head + message_context)
         self.sign_token = response_json["token"]
 

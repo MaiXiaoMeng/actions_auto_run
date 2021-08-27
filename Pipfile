@@ -11,6 +11,9 @@ requests = "*"
 wxpusher = "*"
 rsa = "*"
 demjson = "*"
+telethon = "*"
+socks = "*"
+pysocks = "*"
 
 [requires]
 python_version = "3.6"
